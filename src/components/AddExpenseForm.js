@@ -50,14 +50,22 @@ const AddExpenseForm = () => {
                 </div>
                 <div className= 'col-sm'>
                     <label for="tag">Tag</label>
-                    <input 
+                    <select 
                         required='required'
                         type='text'
                         className='form-control'
                         id='tag'
                         value={tag}
                         onChange={(event)=> setTag(event.target.value)}
-                    ></input>
+                    >
+                        <option value="choose" disabled selected="selected">
+                            -- Select expense tag --
+                        </option>
+                        <option value="Entertainment">Entertainment</option>
+                        <option value="Home">Home</option>
+                        <option value="School">School</option>
+                        <option value="Food">Food</option>
+                    </select>
                 </div>
                 <div className= 'col-sm'>
                     <button type = 'submit' className='btn btn-primary'>
